@@ -1,23 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
-  </head>
-  <body>
-
-    <script src="./script.js"></script>
-  </body>
-</html>
-<!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Türkçe Metin ve Paragraf Yazma Portalı</title>
-  <!-- ANA EKRAN UYGULAMA AYARLARI VE OTOMATİK DEFTER-KALEM İKONU -->
+    <!-- ANA EKRAN UYGULAMA AYARLARI VE OTOMATİK DEFTER-KALEM İKONU -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Yazma Portalı">
@@ -489,7 +476,7 @@
             display: none;
         }
 
-        /* Hedef Metin / Paragraf ve Doğru-Yanlış Harf Renklendirme */
+        /* Hedef Metin / Paragraf ve Harf Renklendirme */
         .prompt-box {
             background: var(--bg-color);
             border: 2px solid rgba(0,0,0,0.1);
@@ -529,7 +516,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Hatalı Kelime Büyütme Kutusu */
         .target-word.word-error-magnify {
             font-size: 2.5rem;
             background-color: #ffffff;
@@ -547,7 +533,6 @@
             border-color: #ff4444;
         }
 
-        /* DOĞRU YAZILAN HARF (YEŞİL) */
         .char-correct {
             color: #16a34a;
             background-color: #dcfce7;
@@ -563,7 +548,6 @@
             background-color: #003300;
         }
 
-        /* YANLIŞ VEYA ATLANAN HARF (KIRMIZI VE BELİRGİN) */
         .char-wrong {
             color: #dc2626;
             background-color: #fee2e2;
@@ -585,7 +569,6 @@
             border-color: #ff3333;
         }
 
-        /* Özel Hatalı Kelime Telafi Modu Kartı */
         .remedial-word-spotlight {
             font-size: 2.6rem;
             color: var(--purple-color);
@@ -669,7 +652,7 @@
             font-weight: bold;
         }
 
-        /* 3 KİLİTLİ YAPBOZ STICKER ALBÜMÜ STİLLERİ */
+        /* 3 Kilitli Yapboz Albüm */
         .sticker-progress-summary {
             background: var(--bg-color);
             padding: 18px;
@@ -810,7 +793,7 @@
             display: inline-block;
         }
 
-        /* SADELEŞTİRİLMİŞ ÖĞRETMEN PANELİ MENÜ BUTONLARI */
+        /* Öğretmen Paneli Butonları */
         .teacher-nav-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
@@ -836,9 +819,7 @@
             transition: all 0.2s ease;
         }
 
-        .teacher-nav-btn .nav-icon {
-            font-size: 2rem;
-        }
+        .teacher-nav-btn .nav-icon { font-size: 2rem; }
 
         .teacher-nav-btn:hover {
             transform: translateY(-3px);
@@ -852,18 +833,14 @@
             box-shadow: 0 6px 18px rgba(37, 99, 235, 0.28);
         }
 
-        body.theme-contrast .teacher-nav-btn.active-tab {
-            color: #000000;
-        }
+        body.theme-contrast .teacher-nav-btn.active-tab { color: #000000; }
 
         .teacher-subpanel {
             display: none;
             animation: fadeInPanel 0.25s ease;
         }
 
-        .teacher-subpanel.active {
-            display: block;
-        }
+        .teacher-subpanel.active { display: block; }
 
         @keyframes fadeInPanel {
             from { opacity: 0; transform: translateY(6px); }
@@ -894,9 +871,16 @@
 
         .hw-assign-row select {
             width: auto;
-            min-width: 195px;
+            min-width: 175px;
             padding: 8px 12px;
             font-size: 1rem;
+        }
+
+        .hw-cat4-controls {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
         }
 
         /* Ev Ödevi Kartları */
@@ -958,7 +942,6 @@
             border: 2px solid var(--primary-color);
         }
 
-        /* Öğretmen Paneli İçi Hatalı Kelime Telafi Çipleri */
         .remedial-word-chip {
             padding: 8px 14px;
             border-radius: 999px;
@@ -975,7 +958,6 @@
             color: #ffffff;
         }
 
-        /* Tebrik Modalı */
         .modal-overlay {
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
@@ -1009,21 +991,15 @@
             box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
 
-        /* Özel Yazdırma Alanları */
-        #single-sticker-print-area, #error-words-worksheet-print-area {
-            display: none;
-        }
+        #single-sticker-print-area, #error-words-worksheet-print-area { display: none; }
 
-        /* YAZDIRMA (PRINT) KURALLARI */
         @media print {
             body {
                 background: #ffffff !important;
                 color: #000000 !important;
                 font-size: 12pt !important;
             }
-            .toolbar, .no-print, .modal-overlay, .toast-msg {
-                display: none !important;
-            }
+            .toolbar, .no-print, .modal-overlay, .toast-msg { display: none !important; }
             .container {
                 box-shadow: none !important;
                 max-width: 100% !important;
@@ -1031,38 +1007,26 @@
                 padding: 0 !important;
                 margin: 0 !important;
             }
-
             body.print-mode-report #screen-teacher,
-            body.print-mode-report #teacher-subpanel-bep {
-                display: block !important;
-            }
+            body.print-mode-report #teacher-subpanel-bep { display: block !important; }
             body.print-mode-report .report-section {
                 border: 2px solid #000 !important;
                 background: #fff !important;
             }
-
-            body.print-mode-stickers #screen-stickers {
-                display: block !important;
-            }
+            body.print-mode-stickers #screen-stickers { display: block !important; }
             body.print-mode-stickers .sticker-grid {
                 grid-template-columns: repeat(2, 1fr) !important;
                 gap: 16px !important;
             }
-            body.print-mode-stickers .sticker-card.locked-for-print {
-                display: none !important;
-            }
+            body.print-mode-stickers .sticker-card.locked-for-print { display: none !important; }
             body.print-mode-stickers .sticker-card {
                 break-inside: avoid;
                 page-break-inside: avoid;
                 border: 3px solid #000 !important;
             }
-            body.print-mode-stickers .sticker-puzzle-box {
-                height: 190px !important;
-            }
+            body.print-mode-stickers .sticker-puzzle-box { height: 190px !important; }
 
-            body.print-mode-single-sticker .container {
-                display: none !important;
-            }
+            body.print-mode-single-sticker .container { display: none !important; }
             body.print-mode-single-sticker #single-sticker-print-area {
                 display: block !important;
                 text-align: center;
@@ -1073,9 +1037,7 @@
                 max-width: 650px;
             }
 
-            body.print-mode-error-worksheet .container {
-                display: none !important;
-            }
+            body.print-mode-error-worksheet .container { display: none !important; }
             body.print-mode-error-worksheet #error-words-worksheet-print-area {
                 display: block !important;
                 padding: 20px;
@@ -1098,7 +1060,6 @@
         </div>
 
         <div class="toolbar-group">
-            <!-- 3 Saniye Basılı Tutulacak Öğretmen Paneli Butonu -->
             <button id="teacher-hold-btn" class="teacher-hold-btn"
                 onpointerdown="startTeacherHold(event)"
                 onpointerup="cancelTeacherHold()"
@@ -1114,7 +1075,7 @@
     <!-- 1. GİRİŞ (SPLASH) EKRANI -->
     <div id="screen-splash" class="container active">
         <h1>🚀 Türkçe Metin ve Paragraf Yazma Portalı</h1>
-        <p style="text-align:center; margin-bottom:20px;">Öğrenci seçtiğinde sistem <strong>Kişi, Olay ve Cümle Havuzundan</strong> her seferinde yeni cümleler ve anlamlı paragraflar karıştırarak hazırlar.</p>
+        <p style="text-align:center; margin-bottom:20px;">Öğrenci seçildiğinde sistem <strong>Kişi, Olay ve Cümle Havuzundan</strong> her seferinde yeni cümleler ve anlamlı paragraflar karıştırarak hazırlar.</p>
         <div class="splash-form">
             <input type="text" id="student-name-input" placeholder="Öğrenci Adı Soyadı" autocomplete="off">
             <button onclick="loginStudent()">Giriş Yap / Yeni Öğrenci Ekle</button>
@@ -1139,7 +1100,6 @@
             <button class="btn-warning" onclick="openStudentHomeworkScreen()" style="font-size:1.1rem; padding:12px 24px;">📝 Ödev Durumumu Gör</button>
         </div>
 
-        <!-- Hızlı Erişim Butonları: Sticker Albümü & Ödevlerim -->
         <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:22px;">
             <button class="btn-warning" onclick="openStickerAlbum()" style="font-size:1.05rem; padding:14px 24px;">
                 🧩 Sticker Albümü ve Liderlik Tablosu
@@ -1171,8 +1131,8 @@
             </div>
             <div class="category-card" onclick="startCategory(4)">
                 <div class="category-icon">📑</div>
-                <h3 id="dash-cat4-title">4. Paragraf Yazma (2-5 Cümle)</h3>
-                <p>Her seferinde kişi ve olayları karıştırarak toplam sayıya oranlı 2, 3, 4 ve 5 cümlelik paragrafları yaz.</p>
+                <h3 id="dash-cat4-title">4. Paragraf Yazma</h3>
+                <p>Seçilen cümle uzunluğu ve kişi/olay örgüsüne göre üretilen paragrafları yaz.</p>
                 <div id="dash-hw-badge-4"></div>
             </div>
         </div>
@@ -1261,9 +1221,8 @@
         <div id="student-homework-list"></div>
     </div>
 
-    <!-- 6. SADELEŞTİRİLMİŞ, BUTONLARLA AÇILAN MODÜLER ÖĞRETMEN PANELİ -->
+    <!-- 6. ÖĞRETMEN PANELİ -->
     <div id="screen-teacher" class="container">
-        <!-- Üst Başlık ve Hızlı Çıkış -->
         <div class="game-header no-print" style="border-bottom:2px solid rgba(0,0,0,0.08); padding-bottom:14px;">
             <div style="display:flex; gap:10px; flex-wrap:wrap;">
                 <button class="btn-outline" onclick="closeTeacherPanel()">⬅ Öğrenci Ekranına Dön</button>
@@ -1278,7 +1237,7 @@
             </div>
         </div>
 
-        <!-- ÖĞRETMEN PANELİ 5 ANA SEÇİM BUTONU -->
+        <!-- 5 ANA SEÇİM BUTONU -->
         <div class="teacher-nav-grid no-print">
             <button id="t-btn-homework" class="teacher-nav-btn active-tab" onclick="switchTeacherSubpanel('homework')">
                 <span class="nav-icon">📝</span>
@@ -1303,7 +1262,7 @@
         </div>
 
         <!-- ========================================================================= -->
-        <!-- ALT PANEL 1: ÖDEV YÖNETİMİ                                                -->
+        <!-- ALT PANEL 1: ÖDEV YÖNETİMİ (AYRIŞTIRILMIŞ PARAGRAF & CÜMLE SAYISI)        -->
         <!-- ========================================================================= -->
         <div id="teacher-subpanel-homework" class="teacher-subpanel active no-print">
             <div class="teacher-box">
@@ -1357,16 +1316,32 @@
                     </select>
                 </div>
 
+                <!-- 4. PARAGRAF YAZMA: PARAGRAF SAYISI VE CÜMLE UZUNLUĞU AYRI AYRI SEÇİLİR -->
                 <div class="hw-assign-row">
-                    <span><strong>4. 📑 Paragraf Yazma (2, 3, 4, 5 Cümle Oranlı)</strong></span>
-                    <select id="hw-count-cat4">
-                        <option value="0">Ödev Yok (0)</option>
-                        <option value="4" selected>4 Paragraf (2, 3, 4, 5 cümleden 1'er adet)</option>
-                        <option value="8">8 Paragraf (2, 3, 4, 5 cümleden 2'şer adet)</option>
-                        <option value="12">12 Paragraf (2, 3, 4, 5 cümleden 3'er adet)</option>
-                        <option value="16">16 Paragraf (2, 3, 4, 5 cümleden 4'er adet)</option>
-                        <option value="20">20 Paragraf (2, 3, 4, 5 cümleden 5'er adet)</option>
-                    </select>
+                    <span><strong>4. 📑 Paragraf Yazma</strong></span>
+                    <div class="hw-cat4-controls">
+                        <!-- Paragraf Sayısı (1'den Başlar) -->
+                        <select id="hw-count-cat4" title="Kaç Paragraf Verilecek?">
+                            <option value="0">Ödev Yok (0)</option>
+                            <option value="1" selected>1 Paragraf</option>
+                            <option value="2">2 Paragraf</option>
+                            <option value="3">3 Paragraf</option>
+                            <option value="4">4 Paragraf</option>
+                            <option value="5">5 Paragraf</option>
+                            <option value="6">6 Paragraf</option>
+                            <option value="8">8 Paragraf</option>
+                            <option value="10">10 Paragraf</option>
+                        </select>
+
+                        <!-- Cümle Uzunluğu / Şablon Seçimi -->
+                        <select id="hw-sent-cat4" title="Her Paragraf Kaç Cümle Olacak?">
+                            <option value="2">2 Cümlelik Paragraf (Kısa & Kolay)</option>
+                            <option value="3">3 Cümlelik Paragraf (Orta Düzey)</option>
+                            <option value="4">4 Cümlelik Paragraf (İleri Düzey)</option>
+                            <option value="5">5 Cümlelik Paragraf (Uzun)</option>
+                            <option value="mixed">Karışık (2-5 Cümle Oranlı)</option>
+                        </select>
+                    </div>
                 </div>
 
                 <button class="btn-success" onclick="assignHomeworkToStudent()" style="width:100%; margin-top:12px; padding:14px; font-size:1.05rem;">
@@ -1426,7 +1401,7 @@
         </div>
 
         <!-- ========================================================================= -->
-        <!-- ALT PANEL 3: HATALI KELİMELERLE ÇALIŞMA PANELİ                            -->
+        <!-- ALT PANEL 3: HATALI KELİMELERLE ÇALIŞMA PANELİ                             -->
         <!-- ========================================================================= -->
         <div id="teacher-subpanel-practice" class="teacher-subpanel no-print">
             <div class="teacher-box" style="border: 3px solid var(--purple-color);">
@@ -1465,14 +1440,14 @@
         </div>
 
         <!-- ========================================================================= -->
-        <!-- ALT PANEL 4: CÜMLE VE PARAGRAF ÜRETİCİ HAVUZU (Kişi ve Olay Örgüsü)        -->
+        <!-- ALT PANEL 4: CÜMLE VE PARAGRAF ÜRETİCİ HAVUZU                             -->
         <!-- ========================================================================= -->
         <div id="teacher-subpanel-sov" class="teacher-subpanel no-print">
             <div class="teacher-box" style="border-color: var(--primary-color);">
                 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:14px;">
                     <div>
                         <h3 style="text-align:left; margin-bottom:4px;">🧩 Özne - Nesne - Yüklem & Paragraf Kişi/Olay Havuzu</h3>
-                        <p style="font-size:0.95rem; opacity:0.85;">Eklediğiniz <strong>Özne (Kişi)</strong>, <strong>Zaman/Yer</strong>, <strong>Sıfat</strong>, <strong>Nesne</strong> ve <strong>Yüklem (Olay)</strong> kelimeleri birbiriyle anlamlı şekilde karıştırılarak hem Bak-Yaz cümlelerini hem de <strong>2, 3, 4 ve 5 cümlelik paragrafları</strong> oluşturur.</p>
+                        <p style="font-size:0.95rem; opacity:0.85;">Eklediğiniz <strong>Özne (Kişi)</strong>, <strong>Zaman/Yer</strong>, <strong>Sıfat</strong>, <strong>Nesne</strong> ve <strong>Yüklem (Olay)</strong> kelimeleri birbiriyle anlamlı şekilde karıştırılarak paragrafları oluşturur.</p>
                     </div>
                     <div>
                         <select id="teacher-sov-mode-select" onchange="toggleTeacherSovMode(this.value)" style="padding:10px; font-size:0.95rem; font-weight:bold;">
@@ -1514,7 +1489,7 @@
 
                 <hr style="margin:16px 0; opacity:0.2;">
                 <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:10px;">
-                    <h4 style="margin:0;">📑 4. Paragraf Yazma (2, 3, 4 ve 5 Cümle Oranlı) Üretilen Paragraf Önizlemesi:</h4>
+                    <h4 style="margin:0;">📑 4. Paragraf Yazma Üretilen Paragraf Önizlemesi:</h4>
                     <button class="btn-outline" onclick="regenerateAndShuffleAllPools()" style="padding:6px 14px; font-size:0.9rem;">🔄 Kişi ve Olayları Yeniden Karıştır</button>
                 </div>
                 <div id="sov-generated-preview" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:10px;"></div>
@@ -1522,7 +1497,7 @@
         </div>
 
         <!-- ========================================================================= -->
-        <!-- ALT PANEL 5: BEP RAPORU, SEVİYE VE PARAGRAF ORANLAMA                      -->
+        <!-- ALT PANEL 5: BEP RAPORU & SEVİYE                                          -->
         <!-- ========================================================================= -->
         <div id="teacher-subpanel-bep" class="teacher-subpanel">
             <div class="teacher-box no-print">
@@ -1533,13 +1508,13 @@
                         <select id="teacher-level-select" onchange="setStudentLevel(1, this.value)"></select>
                     </div>
                     <div>
-                        <label style="display:block; margin-bottom:6px; font-weight:bold;">4. Paragraf Yazma Toplam Paragraf Sayısı (2-5 Cümle Oranlı):</label>
+                        <label style="display:block; margin-bottom:6px; font-weight:bold;">4. Paragraf Yazma Toplam Paragraf Sayısı:</label>
                         <select id="teacher-cat4-total-select" onchange="setCat4TotalQuestions(this.value)">
-                            <option value="8">8 Paragraf (2, 3, 4, 5 cümleden 2'şer adet)</option>
-                            <option value="12">12 Paragraf (2, 3, 4, 5 cümleden 3'er adet)</option>
-                            <option value="16">16 Paragraf (2, 3, 4, 5 cümleden 4'er adet)</option>
-                            <option value="20" selected>20 Paragraf (2, 3, 4, 5 cümleden 5'er adet)</option>
-                            <option value="24">24 Paragraf (2, 3, 4, 5 cümleden 6'şar adet)</option>
+                            <option value="4">4 Paragraf</option>
+                            <option value="8">8 Paragraf</option>
+                            <option value="12">12 Paragraf</option>
+                            <option value="16">16 Paragraf</option>
+                            <option value="20" selected>20 Paragraf</option>
                         </select>
                     </div>
                     <div>
@@ -1562,7 +1537,6 @@
                 </div>
             </div>
 
-            <!-- BEP Raporu İndirme ve Yazdırma Araç Çubuğu -->
             <div class="teacher-box no-print" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
                 <h3 style="margin:0;">📊 Resmi BEP ve Gelişim Raporu İşlemleri</h3>
                 <div style="display:flex; gap:10px; flex-wrap:wrap;">
@@ -1572,7 +1546,6 @@
                 </div>
             </div>
 
-            <!-- Yazdırılabilir / İndirilebilir BEP ve Ödev Raporu Bölümü -->
             <div class="report-section" id="bep-report-content"></div>
         </div>
     </div>
@@ -1597,88 +1570,27 @@
     <div id="toast-msg" class="toast-msg"></div>
 
     <script>
-        // --- 1. ERKEK ÖĞRENCİ İÇİN 10 ADET YÜKSEK ÇÖZÜNÜRLÜKLÜ STICKER KOLEKSİYONU ---
+        // 10 ADET ERKEK ÖĞRENCİ STICKER KOLEKSİYONU
         const maleStickerCatalog = [
-            {
-                id: 1,
-                title: "Süper Spor Araba",
-                emoji: "🏎️",
-                bgColor: "#dc2626",
-                img: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=900&q=85"
-            },
-            {
-                id: 2,
-                title: "Galaksi Uzay Roketi",
-                emoji: "🚀",
-                bgColor: "#1d4ed8",
-                img: "https://images.unsplash.com/photo-1517976487468-f20514c44f53?auto=format&fit=crop&w=900&q=85"
-            },
-            {
-                id: 3,
-                title: "Dev Dinozor T-Rex",
-                emoji: "🦖",
-                bgColor: "#15803d",
-                img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=85"
-            },
-            {
-                id: 4,
-                title: "Süper Teknoloji Robotu",
-                emoji: "🤖",
-                bgColor: "#0284c7",
-                img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=85"
-            },
-            {
-                id: 5,
-                title: "Altın Şampiyonluk Kupası",
-                emoji: "🏆",
-                bgColor: "#d97706",
-                img: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=85"
-            },
-            {
-                id: 6,
-                title: "Ses Ötesi Jet Uçağı",
-                emoji: "🛩️",
-                bgColor: "#334155",
-                img: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=900&q=85"
-            },
-            {
-                id: 7,
-                title: "Ormanlar Kralı Aslan",
-                emoji: "🦁",
-                bgColor: "#b45309",
-                img: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=85"
-            },
-            {
-                id: 8,
-                title: "Korsan Kalyonu Gemisi",
-                emoji: "🏴‍☠️",
-                bgColor: "#4338ca",
-                img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=85"
-            },
-            {
-                id: 9,
-                title: "Ekstrem Dağ Bisikleti",
-                emoji: "🚵",
-                bgColor: "#0d9488",
-                img: "https://images.unsplash.com/photo-1511994298241-608e28f14fde?auto=format&fit=crop&w=900&q=85"
-            },
-            {
-                id: 10,
-                title: "Uzay Kaşifi Astronot",
-                emoji: "👨‍🚀",
-                bgColor: "#6d28d9",
-                img: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=85"
-            }
+            { id: 1, title: "Süper Spor Araba", emoji: "🏎️", bgColor: "#dc2626", img: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=900&q=85" },
+            { id: 2, title: "Galaksi Uzay Roketi", emoji: "🚀", bgColor: "#1d4ed8", img: "https://images.unsplash.com/photo-1517976487468-f20514c44f53?auto=format&fit=crop&w=900&q=85" },
+            { id: 3, title: "Dev Dinozor T-Rex", emoji: "🦖", bgColor: "#15803d", img: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=85" },
+            { id: 4, title: "Süper Teknoloji Robotu", emoji: "🤖", bgColor: "#0284c7", img: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=85" },
+            { id: 5, title: "Altın Şampiyonluk Kupası", emoji: "🏆", bgColor: "#d97706", img: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=85" },
+            { id: 6, title: "Ses Ötesi Jet Uçağı", emoji: "🛩️", bgColor: "#334155", img: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=900&q=85" },
+            { id: 7, title: "Ormanlar Kralı Aslan", emoji: "🦁", bgColor: "#b45309", img: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=85" },
+            { id: 8, title: "Korsan Kalyonu Gemisi", emoji: "🏴‍☠️", bgColor: "#4338ca", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=85" },
+            { id: 9, title: "Ekstrem Dağ Bisikleti", emoji: "🚵", bgColor: "#0d9488", img: "https://images.unsplash.com/photo-1511994298241-608e28f14fde?auto=format&fit=crop&w=900&q=85" },
+            { id: 10, title: "Uzay Kaşifi Astronot", emoji: "👨‍🚀", bgColor: "#6d28d9", img: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=900&q=85" }
         ];
 
         const categoryMeta = {
             1: { name: "Bak ve Yaz", icon: "✍️" },
             2: { name: "Görsel Anlatım", icon: "🖼️" },
             3: { name: "Boşluk Doldurma", icon: "🧩" },
-            4: { name: "Paragraf Yazma (2-5 Cümle)", icon: "📑" }
+            4: { name: "Paragraf Yazma", icon: "📑" }
         };
 
-        // --- 2. DİNAMİK CÜMLE VE PARAGRAF (KİŞİ & OLAY ÖRGÜSÜ) VERİ HAVUZLARI ---
         const shortWordBank = [
             "Elma", "Kitap", "Kalem", "Masa", "Okul", "Çanta", "Silgi", "Defter", "Oyun",
             "Kedi", "Köpek", "Aslan", "Balık", "Güneş", "Bulut", "Deniz", "Bahçe", "Çiçek",
@@ -1770,9 +1682,6 @@
             }
         ];
 
-        // --- KATEGORİ 4 İÇİN ANLAM BÜTÜNLÜKLÜ DİNAMİK PARAGRAF (KİŞİ VE OLAY ÖRGÜSÜ) SENARYO MATRİSİ ---
-        // Her şablonda 5 sıralı olay adımı (s1, s2, s3, s4, s5) bulunur.
-        // İstenen cümle sayısına göre (2, 3, 4 veya 5 cümle) kişi, eşya, mekan ve olaylar rastgele seçilerek anlamlı bir paragraf oluşturulur.
         const paragraphPeoplePool = ["Ali", "Ayşe", "Kerem", "Zeynep", "Mert", "Elif", "Kaan", "Beren", "Arda", "Emre", "Can", "Selin", "Burak", "Defne"];
 
         const coherentParagraphTemplates = [
@@ -2019,131 +1928,31 @@
         ];
 
         const masterVisualCatalog = [
-            {
-                img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Çocuk masada kitap okuyor.", "Öğrenci yeni kitabını okuyor.", "Masada açık bir kitap var."],
-                label: "Kitap Okuma"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Sevimli kedi etrafa bakıyor.", "Küçük kedi sessizce duruyor.", "Yeşil gözlü kedi bize bakıyor."],
-                label: "Sevimli Kedi"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Tabakta kırmızı elma var.", "Dalda taze kırmızı elma duruyor.", "Kırmızı elma çok lezzetli görünüyor."],
-                label: "Kırmızı Elma"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Köpekler parkta birlikte koşuyor.", "İki köpek neşeyle oyun oynuyor.", "Sevimli köpekler dışarıda geziyor."],
-                label: "Koşan Köpekler"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Çimlerin üzerinde futbol topu duruyor.", "Sahada beyaz bir top var.", "Maç için futbol topu hazır."],
-                label: "Futbol Topu"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Yolda hızlı bir bisiklet var.", "Siyah bisiklet kenarda duruyor.", "Sporcu bisikleti ile geziyor."],
-                label: "Bisiklet"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Dışarıda sağanak yağmur yağıyor.", "Camdan yağmur damlaları akıyor.", "Bugün hava çok yağmurlu."],
-                label: "Yağmurlu Hava"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Bahçede renkli çiçekler açmış.", "Sarı çiçekler çok güzel kokuyor.", "İlkbaharda taze çiçekler büyüdü."],
-                label: "Renkli Çiçekler"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Bardakta taze beyaz süt var.", "Sabah kahvaltısı için süt hazır.", "Masada bir bardak süt duruyor."],
-                label: "Bir Bardak Süt"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Boya fırçaları ile resim yapılıyor.", "Masada renkli sulu boyalar var.", "Öğrenci fırça ile resim boyuyor."],
-                label: "Resim ve Boya"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Sınıfta sıralar ve masa var.", "Okul sınıfı ders için hazır.", "Öğrenciler sınıfta ders çalışıyor."],
-                label: "Okul Sınıfı"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Küçük kuş ağaç dalına konmuş.", "Renkli kuş dalda ötüyor.", "Ağaçta sevimli bir kuş var."],
-                label: "Dalda Duran Kuş"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Fırından sıcak ekmek çıktı.", "Masada taze kızarmış ekmek var.", "Annem yemek için ekmek aldı."],
-                label: "Taze Ekmek"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Sporcular sahada hızlıca koşuyor.", "Çocuklar birlikte spor yapıyor.", "Yarışmada sporcular hızla ilerliyor."],
-                label: "Spor Yapanlar"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Yazın mavi deniz çok güzeldir.", "Sahilde dalgalar kıyıya vuruyor.", "Güneşli havada deniz parlıyor."],
-                label: "Deniz ve Sahil"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Kırmızı spor araba yolda gidiyor.", "Hızlı araba caddede duruyor.", "Babam kırmızı arabayı yıkadı."],
-                label: "Kırmızı Spor Araba"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1517976487468-f20514c44f53?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Büyük roket gökyüzüne uçuyor.", "Uzay roketi hızla yükseliyor.", "Astronotlar roket ile uzaya gitti."],
-                label: "Uzay Roketi"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Büyük aslan ormanda dinleniyor.", "Cesur aslan etrafa bakıyor.", "Ormanlar kralı aslan çok güçlüdür."],
-                label: "Ormanlar Kralı Aslan"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Sevimli tavşan çimlerde duruyor.", "Küçük tavşan havuç yiyor.", "Beyaz tavşan bahçede zıplıyor."],
-                label: "Sevimli Tavşan"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Potada turuncu basketbol topu var.", "Çocuklar sahada basketbol oynuyor.", "Basketbol topu potaya girdi."],
-                label: "Basketbol Topu"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Beyaz uçak bulutların üzerinde uçuyor.", "Yolcu uçağı havada süzülüyor.", "Pilot büyük uçağı dikkatlice kullanıyor."],
-                label: "Yolcu Uçağı"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Uzun tren rayların üzerinde gidiyor.", "Hızlı tren istasyona yaklaşıyor.", "Yolcular tren ile seyahat ediyor."],
-                label: "Hızlı Tren"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Bardakta soğuk dondurma var.", "Yazın tatlı dondurma çok sevilir.", "Çocuk çikolatalı dondurma yiyor."],
-                label: "Lezzetli Dondurma"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Masada müzik çalan gitar var.", "Müzisyen güzel bir şarkı çalıyor.", "Dersimizde müzik aletlerini tanıdık."],
-                label: "Müzik ve Gitar"
-            },
-            {
-                img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80",
-                sentences: ["Masada açık bir bilgisayar duruyor.", "Öğrenci bilgisayarda ödev yapıyor.", "Bilgisayar ekranında ders yazısı var."],
-                label: "Dizüstü Bilgisayar"
-            }
+            { img: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=900&q=80", sentences: ["Çocuk masada kitap okuyor.", "Öğrenci yeni kitabını okuyor.", "Masada açık bir kitap var."], label: "Kitap Okuma" },
+            { img: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=900&q=80", sentences: ["Sevimli kedi etrafa bakıyor.", "Küçük kedi sessizce duruyor.", "Yeşil gözlü kedi bize bakıyor."], label: "Sevimli Kedi" },
+            { img: "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=900&q=80", sentences: ["Tabakta kırmızı elma var.", "Dalda taze kırmızı elma duruyor.", "Kırmızı elma çok lezzetli görünüyor."], label: "Kırmızı Elma" },
+            { img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=900&q=80", sentences: ["Köpekler parkta birlikte koşuyor.", "İki köpek neşeyle oyun oynuyor.", "Sevimli köpekler dışarıda geziyor."], label: "Koşan Köpekler" },
+            { img: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=80", sentences: ["Çimlerin üzerinde futbol topu duruyor.", "Sahada beyaz bir top var.", "Maç için futbol topu hazır."], label: "Futbol Topu" },
+            { img: "https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=900&q=80", sentences: ["Yolda hızlı bir bisiklet var.", "Siyah bisiklet kenarda duruyor.", "Sporcu bisikleti ile geziyor."], label: "Bisiklet" },
+            { img: "https://images.unsplash.com/photo-1515694346937-94d85e41e6f0?auto=format&fit=crop&w=900&q=80", sentences: ["Dışarıda sağanak yağmur yağıyor.", "Camdan yağmur damlaları akıyor.", "Bugün hava çok yağmurlu."], label: "Yağmurlu Hava" },
+            { img: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80", sentences: ["Bahçede renkli çiçekler açmış.", "Sarı çiçekler çok güzel kokuyor.", "İlkbaharda taze çiçekler büyüdü."], label: "Renkli Çiçekler" },
+            { img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=80", sentences: ["Bardakta taze beyaz süt var.", "Sabah kahvaltısı için süt hazır.", "Masada bir bardak süt duruyor."], label: "Bir Bardak Süt" },
+            { img: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=900&q=80", sentences: ["Boya fırçaları ile resim yapılıyor.", "Masada renkli sulu boyalar var.", "Öğrenci fırça ile resim boyuyor."], label: "Resim ve Boya" },
+            { img: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80", sentences: ["Sınıfta sıralar ve masa var.", "Okul sınıfı ders için hazır.", "Öğrenciler sınıfta ders çalışıyor."], label: "Okul Sınıfı" },
+            { img: "https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=900&q=80", sentences: ["Küçük kuş ağaç dalına konmuş.", "Renkli kuş dalda ötüyor.", "Ağaçta sevimli bir kuş var."], label: "Dalda Duran Kuş" },
+            { img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80", sentences: ["Fırından sıcak ekmek çıktı.", "Masada taze kızarmış ekmek var.", "Annem yemek için ekmek aldı."], label: "Taze Ekmek" },
+            { img: "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80", sentences: ["Sporcular sahada hızlıca koşuyor.", "Çocuklar birlikte spor yapıyor.", "Yarışmada sporcular hızla ilerliyor."], label: "Spor Yapanlar" },
+            { img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80", sentences: ["Yazın mavi deniz çok güzeldir.", "Sahilde dalgalar kıyıya vuruyor.", "Güneşli havada deniz parlıyor."], label: "Deniz ve Sahil" },
+            { img: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=900&q=80", sentences: ["Kırmızı spor araba yolda gidiyor.", "Hızlı araba caddede duruyor.", "Babam kırmızı arabayı yıkadı."], label: "Kırmızı Spor Araba" },
+            { img: "https://images.unsplash.com/photo-1517976487468-f20514c44f53?auto=format&fit=crop&w=900&q=80", sentences: ["Büyük roket gökyüzüne uçuyor.", "Uzay roketi hızla yükseliyor.", "Astronotlar roket ile uzaya gitti."], label: "Uzay Roketi" },
+            { img: "https://images.unsplash.com/photo-1546182990-dffeafbe841d?auto=format&fit=crop&w=900&q=80", sentences: ["Büyük aslan ormanda dinleniyor.", "Cesur aslan etrafa bakıyor.", "Ormanlar kralı aslan çok güçlüdür."], label: "Ormanlar Kralı Aslan" },
+            { img: "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=900&q=80", sentences: ["Sevimli tavşan çimlerde duruyor.", "Küçük tavşan havuç yiyor.", "Beyaz tavşan bahçede zıplıyor."], label: "Sevimli Tavşan" },
+            { img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=80", sentences: ["Potada turuncu basketbol topu var.", "Çocuklar sahada basketbol oynuyor.", "Basketbol topu potaya girdi."], label: "Basketbol Topu" },
+            { img: "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=900&q=80", sentences: ["Beyaz uçak bulutların üzerinde uçuyor.", "Yolcu uçağı havada süzülüyor.", "Pilot büyük uçağı dikkatlice kullanıyor."], label: "Yolcu Uçağı" },
+            { img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?auto=format&fit=crop&w=900&q=80", sentences: ["Uzun tren rayların üzerinde gidiyor.", "Hızlı tren istasyona yaklaşıyor.", "Yolcular tren ile seyahat ediyor."], label: "Hızlı Tren" },
+            { img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80", sentences: ["Bardakta soğuk dondurma var.", "Yazın tatlı dondurma çok sevilir.", "Çocuk çikolatalı dondurma yiyor."], label: "Lezzetli Dondurma" },
+            { img: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=900&q=80", sentences: ["Masada müzik çalan gitar var.", "Müzisyen güzel bir şarkı çalıyor.", "Dersimizde müzik aletlerini tanıdık."], label: "Müzik ve Gitar" },
+            { img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80", sentences: ["Masada açık bir bilgisayar duruyor.", "Öğrenci bilgisayarda ödev yapıyor.", "Bilgisayar ekranında ders yazısı var."], label: "Dizüstü Bilgisayar" }
         ];
 
         const masterFillInBlankCatalog = [
@@ -2184,7 +1993,6 @@
             { text: "Okula giderken kitaplarımızı ___ koyarız.", missing: "çantaya", options: ["çantaya", "tabağa", "cebe"] }
         ];
 
-        // --- ÖĞRETMEN PANELİ SEKME GEÇİŞİ ---
         function switchTeacherSubpanel(tabName) {
             const tabs = ['homework', 'errors', 'practice', 'sov', 'bep'];
             tabs.forEach(t => {
@@ -2194,23 +2002,16 @@
                 if (panel) panel.classList.toggle('active', t === tabName);
             });
 
-            if (tabName === 'errors') {
-                renderErrorWordsTable();
-            } else if (tabName === 'practice') {
-                initTeacherRemedialPracticePanel();
-            } else if (tabName === 'sov') {
-                renderCustomSovGroups();
-                renderSovGeneratedPreview();
-            } else if (tabName === 'bep') {
-                renderBEPReport();
-            } else if (tabName === 'homework') {
-                renderTeacherHomeworkArchive();
-            }
+            if (tabName === 'errors') renderErrorWordsTable();
+            else if (tabName === 'practice') initTeacherRemedialPracticePanel();
+            else if (tabName === 'sov') { renderCustomSovGroups(); renderSovGeneratedPreview(); }
+            else if (tabName === 'bep') renderBEPReport();
+            else if (tabName === 'homework') renderTeacherHomeworkArchive();
         }
 
-        // --- ÖĞRETMEN ÖZEL KİŞİ VE OLAY (Ö-N-Y) VERİ YÖNETİMİ ---
         let teacherSovMode = localStorage.getItem('bep_teacher_sov_mode') || "mixed";
         let cat4TotalQuestionsCount = parseInt(localStorage.getItem('bep_cat4_para_total') || '20', 10);
+        let cat4SentenceMode = localStorage.getItem('bep_cat4_sentence_mode') || "mixed"; // "2", "3", "4", "5" veya "mixed"
 
         function getCustomSovGroups() {
             return JSON.parse(localStorage.getItem('bep_custom_sov_groups')) || [];
@@ -2285,7 +2086,7 @@
             regenerateAndShuffleAllPools();
             renderCustomSovGroups();
             renderSovGeneratedPreview();
-            showToast("✅ Özel Kişi ve Olay grubu eklendi, cümle ve paragraflar yenilendi!");
+            showToast("✅ Özel Kişi ve Olay grubu eklendi, paragraflar yenilendi!");
         }
 
         function deleteCustomSovGroup(groupId) {
@@ -2352,7 +2153,6 @@
             }).join('');
         }
 
-        // --- RASTGELE KARIŞTIRMA VE DİNAMİK CÜMLE & PARAGRAF ÜRETİM FONKSİYONLARI ---
         function shuffleArray(arr) {
             const copy = [...arr];
             for (let i = copy.length - 1; i > 0; i--) {
@@ -2382,18 +2182,12 @@
             const o = pickRandom(objects);
             const v = pickRandom(verbs);
 
-            if (wordCount === 2) {
-                return `${s} ${v}`;
-            } else if (wordCount === 3) {
-                return `${s} ${o} ${v}`;
-            } else if (wordCount === 4) {
-                return `${s} ${a} ${o} ${v}`;
-            } else {
-                return `${s} ${p} ${a} ${o} ${v}`;
-            }
+            if (wordCount === 2) return `${s} ${v}`;
+            else if (wordCount === 3) return `${s} ${o} ${v}`;
+            else if (wordCount === 4) return `${s} ${a} ${o} ${v}`;
+            else return `${s} ${p} ${a} ${o} ${v}`;
         }
 
-        // Kategori 1: Bak ve Yaz (1 kelimeden 5 kelimeye doğru 25 aşama)
         function generateDynamicBakYazPool() {
             const pool = [];
             const usedStrings = new Set();
@@ -2406,9 +2200,7 @@
                     teacherSingleWords.push(...g.subjects, ...g.objects, ...g.adjectives);
                 });
                 const uniqueTeacherWords = [...new Set(teacherSingleWords)];
-                for (let i = 0; i < 8; i++) {
-                    pool.push(pickRandom(uniqueTeacherWords));
-                }
+                for (let i = 0; i < 8; i++) pool.push(pickRandom(uniqueTeacherWords));
             } else {
                 const shuffledShort = shuffleArray(shortWordBank);
                 for (let i = 0; i < 4; i++) pool.push(shuffledShort[i]);
@@ -2454,11 +2246,9 @@
             return pool;
         }
 
-        // Belirtilen cümle sayısına (2, 3, 4 veya 5 cümle) tam uyan, kişi ve olayları uyumlu karıştıran paragraf üretir
         function buildCoherentParagraphWithExactSentenceCount(sentenceCount) {
             const customGroups = getCustomSovGroups();
 
-            // Eğer öğretmen "Sadece Öğretmenin Eklediği Kişi ve Olaylardan Üret" seçtiyse veya özel gruplar varsa
             if (teacherSovMode === "teacher_only" && customGroups.length > 0) {
                 const g = pickRandom(customGroups);
                 const person = pickRandom(g.subjects);
@@ -2482,10 +2272,7 @@
                 return sentences.join(' ');
             }
 
-            // Hikaye ve Olay Örgüsü Şablonlarından Kişi ve Olayları Karıştırarak Üret
             const tpl = pickRandom(coherentParagraphTemplates);
-
-            // Öğretmenin eklediği özel kişiler varsa onları da kişi havuzuna dahil et
             let availablePeople = [...paragraphPeoplePool];
             customGroups.forEach(g => {
                 if (g.subjects) availablePeople.push(...g.subjects);
@@ -2510,27 +2297,27 @@
                 fillPlaceholders(pickRandom(tpl.s5))
             ];
 
-            // İstenen cümle sayısına (2, 3, 4 veya 5 cümle) göre anlam bütünlüğünü koruyarak birleştir
-            if (sentenceCount === 2) {
-                return `${allFiveSteps[0]} ${allFiveSteps[1]}`;
-            } else if (sentenceCount === 3) {
-                return `${allFiveSteps[0]} ${allFiveSteps[1]} ${allFiveSteps[2]}`;
-            } else if (sentenceCount === 4) {
-                return `${allFiveSteps[0]} ${allFiveSteps[1]} ${allFiveSteps[2]} ${allFiveSteps[4]}`;
-            } else {
-                return allFiveSteps.join(' ');
-            }
+            if (sentenceCount === 2) return `${allFiveSteps[0]} ${allFiveSteps[1]}`;
+            else if (sentenceCount === 3) return `${allFiveSteps[0]} ${allFiveSteps[1]} ${allFiveSteps[2]}`;
+            else if (sentenceCount === 4) return `${allFiveSteps[0]} ${allFiveSteps[1]} ${allFiveSteps[2]} ${allFiveSteps[4]}`;
+            else return allFiveSteps.join(' ');
         }
 
-        // Kategori 4: PARAGRAF YAZMA (Toplam paragraf sayısına göre 2, 3, 4 ve 5 cümlelik paragrafları eşit oranlar)
-        function generateGraduatedParagraphWritingPool(totalParagraphs = 20) {
+        // ESNEK PARAGRAF ÜRETİCİ: Hem istenen toplam paragraf sayısını hem de istenen cümle sayısını (2,3,4,5 veya karma) tam uygular
+        function generateGraduatedParagraphWritingPool(totalParagraphs = 20, mode = "mixed") {
             const pool = [];
             const usedParagraphs = new Set();
+            const count = Math.max(1, parseInt(totalParagraphs, 10));
 
-            // Toplam paragraf sayısını 4 kademeye (2 cümle, 3 cümle, 4 cümle, 5 cümle) eşit oranla
-            for (let i = 0; i < totalParagraphs; i++) {
-                const tierIndex = Math.min(3, Math.floor((i / totalParagraphs) * 4));
-                const targetSentenceCount = 2 + tierIndex; // Sırasıyla: 2, 3, 4, 5 cümlelik paragraflar
+            for (let i = 0; i < count; i++) {
+                let targetSentenceCount = 2;
+                if (mode === "2" || mode === "3" || mode === "4" || mode === "5") {
+                    targetSentenceCount = parseInt(mode, 10);
+                } else {
+                    // Karışık / Kademeli
+                    const tierIndex = Math.min(3, Math.floor((i / count) * 4));
+                    targetSentenceCount = 2 + tierIndex;
+                }
 
                 let candidate = "";
                 let guard = 0;
@@ -2558,11 +2345,11 @@
                 1: generateDynamicBakYazPool(),
                 2: shuffledVisuals,
                 3: shuffleArray(masterFillInBlankCatalog),
-                4: generateGraduatedParagraphWritingPool(cat4TotalQuestionsCount)
+                4: generateGraduatedParagraphWritingPool(cat4TotalQuestionsCount, cat4SentenceMode)
             };
         }
 
-        // --- UYGULAMA DURUMU (STATE) ---
+        // UYGULAMA STATE
         let categoryData = buildSessionCategoryData();
         let currentStudent = null;
         let currentCategory = null;
@@ -2602,11 +2389,8 @@
                 tpInput.addEventListener('keydown', (e) => {
                     if (e.key === 'Enter') {
                         e.preventDefault();
-                        if (tpRemedialResolved) {
-                            nextRemedialWord();
-                        } else {
-                            checkRemedialWordManual();
-                        }
+                        if (tpRemedialResolved) nextRemedialWord();
+                        else checkRemedialWordManual();
                     }
                 });
             }
@@ -2624,21 +2408,20 @@
             categoryData = buildSessionCategoryData();
             populateTeacherLevelSelects();
             renderSovGeneratedPreview();
-            showToast("🔄 Kişiler, olaylar ve paragraflar yeniden karıştırılarak üretildi!");
+            showToast("🔄 Paragraflar ve cümleler yeniden karıştırılarak hazırlandı!");
         }
 
         function setCat4TotalQuestions(val) {
             cat4TotalQuestionsCount = parseInt(val, 10) || 20;
             localStorage.setItem('bep_cat4_para_total', String(cat4TotalQuestionsCount));
-            categoryData[4] = generateGraduatedParagraphWritingPool(cat4TotalQuestionsCount);
+            categoryData[4] = generateGraduatedParagraphWritingPool(cat4TotalQuestionsCount, cat4SentenceMode);
             if (currentStudent) {
                 currentStudent.stats.catLevels[4] = 0;
                 saveCurrentStudentProgress();
             }
             populateTeacherLevelSelects();
             renderSovGeneratedPreview();
-            const perTier = Math.round(cat4TotalQuestionsCount / 4);
-            showToast(`📑 Paragraf Yazma toplam ${cat4TotalQuestionsCount} paragrafa ayarlandı (2, 3, 4, 5 cümleden ${perTier}'er paragraf).`);
+            showToast(`📑 Paragraf Yazma toplam ${cat4TotalQuestionsCount} paragrafa ayarlandı.`);
         }
 
         function showToast(msg) {
@@ -2654,7 +2437,6 @@
             if (screenId === 'screen-dashboard' && currentStudent) updateDashboard();
         }
 
-        // --- TAM EKRAN MODU ---
         function toggleFullScreen() {
             const btn = document.getElementById('fullscreen-btn');
             if (!document.fullscreenElement) {
@@ -2670,7 +2452,6 @@
             }
         }
 
-        // --- 3 SANİYE BASILI TUTMALI ÖĞRETMEN PANELİ ---
         function startTeacherHold(e) {
             e.preventDefault();
             if (holdInterval) clearInterval(holdInterval);
@@ -2722,7 +2503,6 @@
             text.innerText = '🔒 Öğretmen Paneli (3 sn Basılı Tut)';
         }
 
-        // --- ERİŞİLEBİLİRLİK VE SES ---
         function toggleTheme(themeName) {
             document.body.classList.remove('theme-calm', 'theme-contrast');
             if (themeName !== 'default') {
@@ -2806,7 +2586,6 @@
             } catch (e) {}
         }
 
-        // --- ÖĞRENCİ VE VERİ YÖNETİMİ (localStorage) ---
         function getStudents() {
             return JSON.parse(localStorage.getItem('bep_students_v4')) || {};
         }
@@ -2883,7 +2662,7 @@
             if (hasPendingHw) {
                 showToast("📚 Öğretmeninden bekleyen ev ödevin var!");
             } else {
-                showToast("🎲 Bu oturum için kişi ve olaylar karıştırılarak yeni cümle ve paragraflar hazırlandı!");
+                showToast("🎲 Bu oturum için yeni cümle ve paragraflar hazırlandı!");
             }
         }
 
@@ -2960,7 +2739,6 @@
             saveStudents(students);
         }
 
-        // --- EN ÇOK HATA YAPILAN KELİMELER VERİ TABLOSU VE ÖĞRETMEN PANELİ İÇİ ÇALIŞMA EKRANI ---
         function recordWordError(rawWord, errorType, wrongOrSkippedChars = []) {
             if (!currentStudent) return;
             const clean = normalizeWord(rawWord);
@@ -3023,7 +2801,7 @@
 
             const sortedErrors = getSortedErrorWordsList();
             if (sortedErrors.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;">🎉 Öğrencinin henüz hata yaptığı veya harf atladığı bir kelime bulunmuyor. Yukarıdaki kutudan manuel kelime ekleyebilirsiniz.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;">🎉 Öğrencinin henüz hata yaptığı veya harf atladığı bir kelime bulunmuyor.</td></tr>`;
                 return;
             }
 
@@ -3040,7 +2818,7 @@
                     <td>${skippedInfo}</td>
                     <td>
                         <div style="display:flex; gap:6px; flex-wrap:wrap;">
-                            <button class="btn-purple" onclick="openSpecificWordInPracticePanel('${item.word}')" style="padding:6px 12px; font-size:0.85rem;">✍️ Çalışma Panelinde Aç</button>
+                            <button class="btn-purple" onclick="openSpecificWordInPracticePanel('${item.word}')" style="padding:6px 12px; font-size:0.85rem;">✍️ Çalış</button>
                             <button class="btn-danger" onclick="removeErrorWord('${item.word}')" style="padding:6px 12px; font-size:0.85rem;">🗑️ Sil</button>
                         </div>
                     </td>
@@ -3061,11 +2839,7 @@
             const words = rawVal.split(',').map(w => normalizeWord(w)).filter(w => w.length > 0);
             words.forEach(w => {
                 if (!currentStudent.stats.wordErrorCounts[w]) {
-                    currentStudent.stats.wordErrorCounts[w] = {
-                        count: 1,
-                        skippedLetters: [],
-                        lastType: "Öğretmen Ekledi"
-                    };
+                    currentStudent.stats.wordErrorCounts[w] = { count: 1, skippedLetters: [], lastType: "Öğretmen Ekledi" };
                 } else {
                     currentStudent.stats.wordErrorCounts[w].count++;
                 }
@@ -3083,10 +2857,9 @@
             currentStudent.stats.skippedWordsList = (currentStudent.stats.skippedWordsList || []).filter(w => w !== word);
             saveCurrentStudentProgress();
             renderErrorWordsTable();
-            showToast(`🗑️ "${word}" kelimesi listeden kaldırıldı.`);
+            showToast(`🗑️ "${word}" kelimesi kaldırıldı.`);
         }
 
-        // --- ÖĞRETMEN PANELİ 3. BUTON: HATALI KELİMELERLE TEKER TEKER ÇALIŞMA PANELİ ---
         function openSpecificWordInPracticePanel(word) {
             switchTeacherSubpanel('practice');
             const idx = tpRemedialWords.findIndex(item => item.word === word);
@@ -3205,9 +2978,7 @@
                 document.getElementById('tp-remedial-success').style.display = 'block';
 
                 setTimeout(() => {
-                    if (tpRemedialResolved) {
-                        nextRemedialWord();
-                    }
+                    if (tpRemedialResolved) nextRemedialWord();
                 }, 1300);
             } else {
                 const errType = analysis.status === 'letter_skipped' ? "Harf Atlama" : "Yazım Hatası";
@@ -3263,7 +3034,7 @@
                         <tr>
                             <th style="padding:12px; border:2px solid #000; text-align:left;">Hedef Kelime</th>
                             <th style="padding:12px; border:2px solid #000;">Hata Sayısı</th>
-                            <th style="padding:12px; border:2px solid #000; text-align:left;">Öğrenci Yazım Alanı (Bakarak Teker Teker Yaz)</th>
+                            <th style="padding:12px; border:2px solid #000; text-align:left;">Öğrenci Yazım Alanı</th>
                         </tr>
                     </thead>
                     <tbody>${rowsHtml}</tbody>
@@ -3278,7 +3049,6 @@
             }, 250);
         }
 
-        // --- ÇEVRİMDIŞI YEDEK SVG GÖRSEL ÜRETİCİ ---
         function createOfflineSVG(label, emoji = "⭐", bgColor = "#1e3a8a") {
             const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
                 <rect width="800" height="500" fill="${bgColor}"/>
@@ -3289,7 +3059,6 @@
             return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
         }
 
-        // --- 3 KİLİTLİ YAPBOZ STICKER ALBÜMÜ ---
         function openStickerAlbum() {
             if (!currentStudent) return;
             showScreen('screen-stickers');
@@ -3313,9 +3082,9 @@
             const infoEl = document.getElementById('next-lock-info');
 
             if (stars >= 1500) {
-                infoEl.innerText = "🎉 TEBRİKLER! 10 Sticker'ın tamamını (30 kilidi) açarak Şampiyon Koleksiyoncu oldun!";
+                infoEl.innerText = "🎉 TEBRİKLER! 10 Sticker'ın tamamını açarak Şampiyon Koleksiyoncu oldun!";
             } else {
-                infoEl.innerText = `🔓 Sıradaki Yapboz Kilidini Kırmak İçin Sadece ${needed} Yıldız Kaldı! (Hedef: ${nextLockTarget} ⭐)`;
+                infoEl.innerText = `🔓 Sıradaki Yapboz Kilidini Kırmak İçin ${needed} Yıldız Kaldı! (Hedef: ${nextLockTarget} ⭐)`;
             }
 
             const grid = document.getElementById('sticker-grid');
@@ -3389,7 +3158,7 @@
             }
             const fullStickersCount = Math.floor(currentStudent.stars / 150);
             if (fullStickersCount < 1) {
-                showToast("🔒 Henüz 3 kilidi tamamlanmış (150 Yıldız) bir sticker bulunmuyor!");
+                showToast("🔒 Henüz 3 kilidi tamamlanmış bir sticker bulunmuyor!");
                 return;
             }
             openStickerAlbum();
@@ -3405,7 +3174,7 @@
             if (!currentStudent) return;
             const requiredStars = (stickerIndex + 1) * 150;
             if (currentStudent.stars < requiredStars) {
-                showToast(`🔒 Bu sticker henüz tamamlanmadı! Yazdırmak için ${requiredStars} yıldıza ulaşmalısın.`);
+                showToast(`🔒 Bu sticker henüz tamamlanmadı!`);
                 return;
             }
 
@@ -3441,7 +3210,6 @@
             }, 200);
         }
 
-        // --- BEP RAPORU İNDİRME FONKSİYONLARI (.DOC VE .TXT) ---
         function downloadBEPReportTxt() {
             if (!currentStudent) {
                 showToast("Lütfen önce bir öğrenci seçin.");
@@ -3465,9 +3233,8 @@
             lines.push("====================================================================");
             lines.push(`Öğrenci Adı Soyadı           : ${currentStudent.name}`);
             lines.push(`Rapor Tarihi                 : ${reportDate}`);
-            lines.push(`Uygulama Alanı               : Türkçe Bakarak Yazma, Görsel Yorumlama ve Kademeli Paragraf Yazma (2-5 Cümle)`);
             lines.push(`Bak-Yaz Mevcut Aşaması       : ${stats.catLevels[1] + 1} / ${categoryData[1].length}`);
-            lines.push(`Paragraf Yazma Aşaması       : ${(stats.catLevels[4] || 0) + 1} / ${categoryData[4].length} (2-5 Cümle Oranlı)`);
+            lines.push(`Paragraf Yazma Aşaması       : ${(stats.catLevels[4] || 0) + 1} / ${categoryData[4].length}`);
             lines.push(`Toplam Deneme Sayısı         : ${total}`);
             lines.push(`Başarılı Tamamlama           : ${correct}`);
             lines.push(`Genel Başarı Oranı           : %${rate}`);
@@ -3478,17 +3245,6 @@
             lines.push("--------------------------------------------------------------------");
             lines.push("MEB / BEP EĞİTSEL DEĞERLENDİRME METNİ:");
             lines.push(getBEPAdviceText(currentStudent.name, total, correct, rate, letterSkips, skippedWords));
-            lines.push("--------------------------------------------------------------------");
-            lines.push("EV ÖDEVİ TAKİP VE VELİ GÖRÜŞÜ ÖZETİ:");
-            if (currentStudent.homeworks && currentStudent.homeworks.length > 0) {
-                currentStudent.homeworks.forEach((hw, i) => {
-                    const details = hw.tasks.map(t => `${t.catName} (${t.currentCount}/${t.targetCount}${t.done ? ' Tamamlandı' : ' Devam Ediyor'})`).join(', ');
-                    lines.push(`${i + 1}. Tarih: ${hw.date} (${hw.title}) -> ${details}`);
-                    lines.push(`   Veli Notu: ${hw.parentNote || 'Girilmedi'}`);
-                });
-            } else {
-                lines.push("Henüz ev ödevi kaydı bulunmamaktadır.");
-            }
             lines.push("====================================================================");
 
             triggerFileDownload(`${currentStudent.name}_BEP_Raporu_${reportDate}.txt`, lines.join('\n'), 'text/plain;charset=utf-8');
@@ -3522,13 +3278,13 @@
         function getBEPAdviceText(name, total, correct, rate, letterSkips, skippedWords) {
             let advice = "";
             if (letterSkips > 3) {
-                advice = `Öğrencinin yazma etkinlikleri sırasında toplam ${letterSkips} kez harf atlama davranışı gösterdiği tespit edilmiştir (${skippedWords}). Görsel dikkat, doğru/yanlış harf ayırt etme ve heceleme çalışmaları desteklenmeli; hatalı kelimeler çalışma paneli üzerinden teker teker tekrar edilmelidir.`;
+                advice = `Öğrencinin yazma etkinlikleri sırasında toplam ${letterSkips} kez harf atlama davranışı gösterdiği tespit edilmiştir (${skippedWords}). Görsel dikkat ve heceleme çalışmaları desteklenmelidir.`;
             } else if (rate >= 80) {
-                advice = `Öğrenci 2 cümleden 5 cümleye doğru kademeli olarak uzayan paragraf yazma ve görsel ifade çalışmalarını yüksek doğrulukla (%${rate}) tamamlamaktadır. Paragraf uzunlukları kademeli olarak artırılabilir.`;
+                advice = `Öğrenci paragraf yazma ve görsel ifade çalışmalarını yüksek doğrulukla (%${rate}) tamamlamaktadır. Cümle ve paragraf uzunlukları kademeli olarak artırılabilir.`;
             } else {
-                advice = `Öğrenci cümle ve paragraf yazma çalışmalarını görsel (yeşil/kırmızı harf ipucu) ve işitsel desteklerle sürdürmektedir. Kelime bütününe odaklanma ve satır takibi becerilerinin pekiştirilmesi önerilir.`;
+                advice = `Öğrenci yazma çalışmalarını görsel ve işitsel desteklerle sürdürmektedir. Kelime bütününe odaklanma ve satır takibi becerilerinin pekiştirilmesi önerilir.`;
             }
-            return `Öğrenci ${name}, dijital yazma ve ifade portalında gerçekleştirilen çalışmalarda toplam ${total} deneme yapmış ve ${correct} etkinliği hatasız tamamlayarak %${rate} başarı oranı elde etmiştir. ${advice}`;
+            return `Öğrenci ${name}, yazma portalında toplam ${total} deneme yapmış ve ${correct} etkinliği hatasız tamamlayarak %${rate} başarı oranı elde etmiştir. ${advice}`;
         }
 
         function renderLeaderboard() {
@@ -3562,7 +3318,7 @@
             });
         }
 
-        // --- TEK PANELDEN KATEGORİ BAZLI EV ÖDEVİ SİSTEMİ ---
+        // --- GÜNCELLENMİŞ ÖDEV ATAMA SİSTEMİ: PARAGRAF SAYISI VE CÜMLE SAYISINI AYRI AYRI İŞLER ---
         function assignHomeworkToStudent() {
             if (!currentStudent) {
                 showToast("Lütfen önce giriş ekranından bir öğrenci seçin!");
@@ -3574,24 +3330,44 @@
 
             const tasks = [];
             for (let c = 1; c <= 4; c++) {
-                const countVal = parseInt(document.getElementById(`hw-count-cat${c}`).value, 10);
-                if (countVal > 0) {
-                    tasks.push({
-                        catId: c,
-                        catName: categoryMeta[c].name,
-                        icon: categoryMeta[c].icon,
-                        targetCount: countVal,
-                        currentCount: 0,
-                        done: false,
-                        rewardStars: countVal * 5
-                    });
+                if (c === 4) {
+                    const countVal = parseInt(document.getElementById('hw-count-cat4').value, 10);
+                    const sentModeVal = document.getElementById('hw-sent-cat4').value;
 
-                    // Eğer 4. Kategori (Paragraf Yazma) için ödev verildiyse, toplam paragraf sayısını ödev sayısına göre 2, 3, 4, 5 cümleye oranla!
-                    if (c === 4 && countVal >= 4) {
+                    if (countVal > 0) {
+                        const sentLabel = sentModeVal === "mixed" ? "Karışık (2-5 Cümle)" : `${sentModeVal} Cümlelik`;
+                        tasks.push({
+                            catId: 4,
+                            catName: `Paragraf Yazma (${sentLabel})`,
+                            icon: categoryMeta[4].icon,
+                            targetCount: countVal,
+                            currentCount: 0,
+                            done: false,
+                            rewardStars: countVal * 15,
+                            sentenceMode: sentModeVal
+                        });
+
+                        // 4. Kategori veri havuzunu tam istenen adet ve cümle boyuna göre yeniden oluştur
                         cat4TotalQuestionsCount = countVal;
+                        cat4SentenceMode = sentModeVal;
                         localStorage.setItem('bep_cat4_para_total', String(countVal));
-                        categoryData[4] = generateGraduatedParagraphWritingPool(countVal);
+                        localStorage.setItem('bep_cat4_sentence_mode', sentModeVal);
+
+                        categoryData[4] = generateGraduatedParagraphWritingPool(countVal, sentModeVal);
                         currentStudent.stats.catLevels[4] = 0;
+                    }
+                } else {
+                    const countVal = parseInt(document.getElementById(`hw-count-cat${c}`).value, 10);
+                    if (countVal > 0) {
+                        tasks.push({
+                            catId: c,
+                            catName: categoryMeta[c].name,
+                            icon: categoryMeta[c].icon,
+                            targetCount: countVal,
+                            currentCount: 0,
+                            done: false,
+                            rewardStars: countVal * 5
+                        });
                     }
                 }
             }
@@ -3602,7 +3378,6 @@
             }
 
             const formattedDate = dateVal.split('-').reverse().join('.');
-
             const newHw = {
                 id: 'hw_' + Date.now(),
                 date: formattedDate,
@@ -3619,7 +3394,7 @@
             populateTeacherLevelSelects();
             renderTeacherHomeworkArchive();
             renderBEPReport();
-            showToast(`✅ ${formattedDate} tarihli ödev paketi (${tasks.length} kategori) öğrenciye atandı!`);
+            showToast(`✅ ${formattedDate} tarihli ödev öğrenciye atandı!`);
         }
 
         function openStudentHomeworkScreen() {
@@ -3649,7 +3424,7 @@
                             <div class="hw-task-item completed">
                                 <div style="flex:1;">
                                     <div style="font-size:1.2rem; font-weight:bold; color:#15803d;">
-                                        ✅ ${task.icon} ${task.catName} (${task.currentCount} / ${task.targetCount} Deneme Tamamlandı)
+                                        ✅ ${task.icon} ${task.catName} (${task.currentCount} / ${task.targetCount} Tamamlandı)
                                     </div>
                                     <div class="hw-progress-bar-wrap">
                                         <div class="hw-progress-bar-fill" style="width:100%;"></div>
@@ -3687,8 +3462,8 @@
                     </div>
                     ${tasksHtml}
                     <div style="margin-top:16px; padding-top:14px; border-top:2px dashed rgba(0,0,0,0.12);">
-                        <label style="display:block; font-weight:bold; margin-bottom:6px;">👨‍👩‍👦 Veli Notu ve Gözlemi (Evde çalışma nasıldı?):</label>
-                        <textarea id="parent-note-${hw.id}" rows="2" placeholder="Velimiz buraya ödevle ilgili yorumunu yazabilir...">${hw.parentNote || ''}</textarea>
+                        <label style="display:block; font-weight:bold; margin-bottom:6px;">👨‍👩‍👦 Veli Notu ve Gözlemi:</label>
+                        <textarea id="parent-note-${hw.id}" rows="2" placeholder="Velimiz buraya ödevle ilgili gözlemini yazabilir...">${hw.parentNote || ''}</textarea>
                         <div style="display:flex; justify-content:space-between; align-items:center; margin-top:10px; flex-wrap:wrap; gap:10px;">
                             <button onclick="saveParentNote('${hw.id}')">💾 Veli Notunu Kaydet</button>
                             <button class="btn-outline" onclick="downloadSingleHomework('${hw.id}')">📥 Bu Ödevi İndir (.txt)</button>
@@ -3705,7 +3480,7 @@
             const noteEl = document.getElementById(`parent-note-${hwId}`);
             hw.parentNote = noteEl.value.trim();
             saveCurrentStudentProgress();
-            showToast("👨‍👩‍👦 Veli notu başarıyla kaydedildi!");
+            showToast("👨‍👩‍👦 Veli notu kaydedildi!");
         }
 
         function renderTeacherHomeworkArchive() {
@@ -3727,7 +3502,7 @@
                             <div>
                                 <strong>📅 ${hw.date} - ${hw.title}</strong>
                                 <span style="margin-left:10px; font-weight:bold; color:${doneCount === hw.tasks.length ? '#15803d' : '#d97706'};">
-                                    (${doneCount}/${hw.tasks.length} Kategori Tamamlandı)
+                                    (${doneCount}/${hw.tasks.length} Tamamlandı)
                                 </span>
                             </div>
                             <div style="display:flex; gap:8px;">
@@ -3736,7 +3511,7 @@
                             </div>
                         </div>
                         <p style="margin-top:6px; font-size:0.95rem;"><strong>İçerik:</strong> ${taskSummary}</p>
-                        <p style="margin-top:6px; font-size:0.95rem;"><strong>👨‍👩‍👦 Veli Notu:</strong> ${hw.parentNote ? hw.parentNote : '<em>Henüz veli notu girilmedi.</em>'}</p>
+                        <p style="margin-top:6px; font-size:0.95rem;"><strong>👨‍👩‍👦 Veli Notu:</strong> ${hw.parentNote ? hw.parentNote : '<em>Henüz girilmedi.</em>'}</p>
                     </div>
                 `;
             }).join('');
@@ -3763,11 +3538,10 @@
             lines.push("ÖDEV KATEGORİLERİ VE TAMAMLAMA DURUMU:");
             hw.tasks.forEach((t, i) => {
                 const status = t.done ? "[TAMAMLANDI ✅]" : "[DEVAM EDİYOR ⏳]";
-                lines.push(`${i + 1}. ${status} ${t.catName}: ${t.currentCount} / ${t.targetCount} Doğru Deneme (+${t.rewardStars} Yıldız)`);
+                lines.push(`${i + 1}. ${status} ${t.catName}: ${t.currentCount} / ${t.targetCount} (+${t.rewardStars} Yıldız)`);
             });
             lines.push("----------------------------------------------------");
-            lines.push(`VELİ NOTU VE YORUMU:`);
-            lines.push(hw.parentNote ? hw.parentNote : "Veli notu girilmemiştir.");
+            lines.push(`VELİ NOTU: ${hw.parentNote || "Girilmemiştir."}`);
             lines.push("====================================================\n\n");
             return lines.join('\n');
         }
@@ -3786,7 +3560,7 @@
                 return;
             }
             const content = currentStudent.homeworks.map(hw => formatHomeworkForDownload(hw)).join('\n');
-            triggerFileDownload(`${currentStudent.name}_Tum_Odev_Arsivi.txt`, content, 'text/plain;charset=utf-8');
+            triggerFileDownload(`${currentStudent.name}_Tum_Odevler.txt`, content, 'text/plain;charset=utf-8');
         }
 
         function triggerFileDownload(filename, content, mimeType) {
@@ -3801,7 +3575,6 @@
             URL.revokeObjectURL(url);
         }
 
-        // --- OYUN VE ETKİNLİK MANTIĞI ---
         function startCategory(catIndex) {
             currentCategory = catIndex;
             showScreen('screen-game');
@@ -3861,7 +3634,7 @@
                 if (currentCategory === 1) {
                     categoryData[1] = generateDynamicBakYazPool();
                 } else if (currentCategory === 4) {
-                    categoryData[4] = generateGraduatedParagraphWritingPool(cat4TotalQuestionsCount);
+                    categoryData[4] = generateGraduatedParagraphWritingPool(cat4TotalQuestionsCount, cat4SentenceMode);
                 } else {
                     categoryData[currentCategory] = shuffleArray(categoryData[currentCategory]);
                 }
@@ -3888,7 +3661,6 @@
                 currentQuestionText = currentQuestionData;
                 renderTargetSentenceAsWords(currentQuestionData, "Aşağıdaki metne dikkatlice bak ve aynısını yaz:");
                 gameArea.innerHTML = `<input type="text" id="ans-input" placeholder="Kelimelere bakarak buraya yaz..." autocomplete="off">`;
-
             } else if (currentCategory === 2) {
                 visualContainer.style.display = 'block';
                 const imgEl = document.getElementById('scenario-image');
@@ -3903,9 +3675,7 @@
                     renderTargetSentenceAsWords("Görselde ne oluyor? Dikkatlice bakıp yaz:", "");
                 }
                 gameArea.innerHTML = `<input type="text" id="ans-input" placeholder="Görselde gördüğün durumu buraya yaz..." autocomplete="off">`;
-
             } else if (currentCategory === 3) {
-                // BOŞLUK DOLDURMA SESLENDİRMESİ: Boş bırakılan yere "nokta nokta" der
                 currentQuestionText = currentQuestionData.text.replace(/___+/g, 'nokta nokta');
                 renderTargetSentenceAsWords(currentQuestionData.text, "Cümledeki boşluğa uygun kelimeyi seçip aşağıya kendin yaz:");
 
@@ -3916,14 +3686,12 @@
                 ).join('');
 
                 gameArea.innerHTML = `<input type="text" id="ans-input" placeholder="Boşluğa gelecek kelimeyi buraya yaz..." autocomplete="off">`;
-
             } else if (currentCategory === 4) {
-                // KATEGORİ 4: PARAGRAF YAZMA (2, 3, 4 VE 5 CÜMLELİK PARAGRAFLAR - KİŞİ VE OLAY KARIŞTIRILMALI)
                 currentQuestionText = currentQuestionData;
                 const sCount = countSentencesInParagraph(currentQuestionData);
                 renderTargetSentenceAsWords(
                     currentQuestionData,
-                    `📑 ${sCount} Cümlelik Paragraf Yazma Çalışması — Paragrafa dikkatlice bak ve cümleleri sırasıyla, harf atlamadan yaz:`,
+                    `📑 ${sCount} Cümlelik Paragraf Yazma Çalışması — Paragrafa bakarak cümleleri sırasıyla, harf atlamadan yaz:`,
                     true
                 );
                 gameArea.innerHTML = `<textarea id="ans-input" rows="4" placeholder="${sCount} cümlelik paragrafı sırasıyla buraya yaz..." autocomplete="off"></textarea>`;
@@ -3938,25 +3706,20 @@
                     inputEl.addEventListener('keydown', (ev) => {
                         if (ev.key === 'Enter') {
                             ev.preventDefault();
-                            if (!isQuestionResolved) {
-                                checkAnswer();
-                            }
+                            if (!isQuestionResolved) checkAnswer();
                         }
                     });
                 }
             }, 100);
         }
 
-        // --- DOĞRU HARFLERİ YEŞİL, YANLIŞ/ATLANAN HARFLERİ KIRMIZI YAPAN HİZALAMA MOTORU ---
         function normalizeWord(w) {
             return w.replace(/[.,!?;:'"()]/g, '').trim().toLocaleLowerCase('tr-TR');
         }
 
         function splitCoreWordAndPunct(rawWord) {
             const match = rawWord.match(/^(.+?)([.,!?;:'"()]*)$/);
-            if (match) {
-                return { core: match[1], punct: match[2] || "" };
-            }
+            if (match) return { core: match[1], punct: match[2] || "" };
             return { core: rawWord, punct: "" };
         }
 
@@ -3986,7 +3749,6 @@
             const m = tLower.length;
             const n = uLower.length;
 
-            // 1. Harf atlama kontrolü
             if (n < m) {
                 let tIdx = 0, uIdx = 0;
                 const matchedTargetIndices = new Set();
@@ -4022,7 +3784,6 @@
                 }
             }
 
-            // 2. Genel Harf Hizalama (Doğru harfler yeşil, yanlış/eksik harfler kırmızı)
             const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
             for (let i = 0; i <= m; i++) dp[i][0] = i;
             for (let j = 0; j <= n; j++) dp[0][j] = j;
@@ -4102,17 +3863,15 @@
                     <div style="margin-top:6px; font-size:1.25rem;">
                         Senin Yazdığın: ${analysis.typedColoredHtml} &nbsp;➡&nbsp; Doğrusu: ${analysis.targetColoredHtml}
                     </div>
-                    <div style="margin-top:4px; font-size:0.95rem; opacity:0.85;">(Doğru harfler <strong>yeşil</strong>, unuttuğun harf <strong>kırmızı</strong> ile gösterildi.)</div>
                 `;
             } else if (analysis.status === 'missing_word') {
-                return `Paragraf/cümle henüz tamamlanmadı. Büyüyen <strong>"${rawTargetWord}"</strong> kelimesinden itibaren yazmaya devam etmelisin.`;
+                return `Paragraf henüz bitmedi. Büyüyen <strong>"${rawTargetWord}"</strong> kelimesinden devam etmelisin.`;
             } else {
                 return `
                     <div><strong>"${rawTargetWord}"</strong> kelimesinde hatalı harf var!</div>
                     <div style="margin-top:6px; font-size:1.25rem;">
                         Senin Yazdığın: ${analysis.typedColoredHtml} &nbsp;➡&nbsp; Doğrusu: ${analysis.targetColoredHtml}
                     </div>
-                    <div style="margin-top:4px; font-size:0.95rem; opacity:0.85;">(Doğru yazdığın harfler <strong>yeşil</strong>, düzeltmen gereken harfler <strong>kırmızı</strong> ile gösterildi.)</div>
                 `;
             }
         }
@@ -4147,7 +3906,6 @@
             });
         }
 
-        // --- ANLIK YAZIM TAKİBİ ---
         function handleRealtimeTyping(e) {
             if (isQuestionResolved) return;
             const val = e.target.value;
@@ -4181,8 +3939,7 @@
                         hideWarningBanner();
                     }
                 }
-            }
-            else if (currentCategory === 3) {
+            } else if (currentCategory === 3) {
                 const targetMissing = currentQuestionData.missing;
                 if (normalizeWord(val) === normalizeWord(targetMissing)) {
                     checkAnswer();
@@ -4225,8 +3982,7 @@
                     }
                 }
                 processResult(true);
-            }
-            else if (currentCategory === 2 && visualMode === "keywords") {
+            } else if (currentCategory === 2 && visualMode === "keywords") {
                 const userRaw = document.getElementById('ans-input').value.trim();
                 const userWords = userRaw.length > 0 ? userRaw.split(/\s+/) : [];
                 const targetSentenceWords = currentQuestionData.sentence.split(/\s+/);
@@ -4245,12 +4001,11 @@
                 }
 
                 if (userWords.length < 2) {
-                    magnifyWordAndWarn(0, "Görselde", null, "Lütfen görseldeki durumu anlatan en az 2-3 kelimelik bir cümle yaz.");
+                    magnifyWordAndWarn(0, "Görselde", null, "Lütfen en az 2-3 kelimelik bir cümle yaz.");
                     return;
                 }
                 processResult(true);
-            }
-            else if (currentCategory === 3) {
+            } else if (currentCategory === 3) {
                 const userRaw = document.getElementById('ans-input').value.trim();
                 const targetMissing = currentQuestionData.missing;
                 const analysis = analyzeWordWithGreenRedDiff(targetMissing, userRaw);
@@ -4300,10 +4055,10 @@
                     t.done = true;
                     currentStudent.stars += t.rewardStars;
                     hwAlertBox.style.display = 'block';
-                    hwAlertBox.innerHTML = `✅ EV ÖDEVİ GÖREVİ TAMAMLANDI!<br><strong>${t.icon} ${t.catName} (${t.currentCount}/${t.targetCount})</strong> otomatik tik aldı ve <strong>+${t.rewardStars} Bonus Yıldız</strong> kazandın!`;
+                    hwAlertBox.innerHTML = `✅ EV ÖDEVİ TAMAMLANDI!<br><strong>${t.icon} ${t.catName} (${t.currentCount}/${t.targetCount})</strong> tamamlandı ve <strong>+${t.rewardStars} Bonus Yıldız</strong> kazandın!`;
                 } else {
                     hwAlertBox.style.display = 'block';
-                    hwAlertBox.innerHTML = `🏠 Ev Ödevi İlerlemesi: <strong>${t.icon} ${t.catName} (${t.currentCount} / ${t.targetCount})</strong>`;
+                    hwAlertBox.innerHTML = `🏠 Ev Ödevi: <strong>${t.icon} ${t.catName} (${t.currentCount} / ${t.targetCount})</strong>`;
                 }
             } else {
                 hwAlertBox.style.display = 'none';
@@ -4350,7 +4105,6 @@
             loadQuestion();
         }
 
-        // --- ÖĞRETMEN PANELİ AÇILIŞ VE GENEL FONKSİYONLAR ---
         function populateTeacherLevelSelects() {
             const levelSelect1 = document.getElementById('teacher-level-select');
             if (levelSelect1) {
@@ -4379,7 +4133,7 @@
             if (currentStudent) {
                 nameEl.innerText = `👤 Aktif Öğrenci: ${currentStudent.name} (⭐ ${currentStudent.stars} Yıldız)`;
             } else {
-                nameEl.innerText = "⚠️ Öğrenci Seçilmedi (Lütfen giriş ekranından bir öğrenci seçin)";
+                nameEl.innerText = "⚠️ Öğrenci Seçilmedi";
             }
 
             const currentActiveTabBtn = document.querySelector('.teacher-nav-btn.active-tab');
@@ -4392,11 +4146,8 @@
         }
 
         function closeTeacherPanel() {
-            if (currentStudent) {
-                showScreen('screen-dashboard');
-            } else {
-                showScreen('screen-splash');
-            }
+            if (currentStudent) showScreen('screen-dashboard');
+            else showScreen('screen-splash');
         }
 
         function giveBonusStars(amount) {
@@ -4432,7 +4183,7 @@
 
         function renderBEPReport() {
             if (!currentStudent) {
-                document.getElementById('bep-report-content').innerHTML = "<p>Raporu görüntülemek için önce giriş ekranından bir öğrenci seçmelisiniz.</p>";
+                document.getElementById('bep-report-content').innerHTML = "<p>Raporu görüntülemek için önce bir öğrenci seçmelisiniz.</p>";
                 return;
             }
             const stats = currentStudent.stats;
@@ -4458,12 +4209,12 @@
 
             document.getElementById('bep-report-content').innerHTML = `
                 <h3>📊 ${currentStudent.name} - Bireyselleştirilmiş Eğitim Programı (BEP) ve Ev Ödevi Raporu</h3>
-                <p><strong>Rapor Tarihi:</strong> ${reportDate} | <strong>Uygulama Alanı:</strong> Türkçe Bakarak Yazma, Görsel Yorumlama ve Kademeli Paragraf Yazma (2-5 Cümle)</p>
+                <p><strong>Rapor Tarihi:</strong> ${reportDate} | <strong>Uygulama Alanı:</strong> Türkçe Bakarak Yazma, Görsel Yorumlama ve Paragraf Yazma</p>
                 <p><strong>Bak-Yaz Mevcut Aşaması:</strong> ${stats.catLevels[1] + 1} / ${categoryData[1].length} | <strong>Paragraf Yazma Aşaması:</strong> ${(stats.catLevels[4] || 0) + 1} / ${categoryData[4].length}</p>
                 <p><strong>Toplam Deneme:</strong> ${total} | <strong>Başarılı Tamamlama:</strong> ${correct} | <strong>Başarı Oranı:</strong> %${rate}</p>
                 <p><strong>Kazanılan Yıldız:</strong> ${currentStudent.stars} ⭐ | <strong>Tamamlanan Sticker:</strong> ${unlockedStickers} / 10</p>
                 <p><strong>Tespit Edilen Harf Atlama Sayısı:</strong> ${letterSkips} kez</p>
-                <p><strong>En Çok Hata Yapılan Kelimeler ve Sayıları:</strong> ${skippedWords}</p>
+                <p><strong>En Çok Hata Yapılan Kelimeler:</strong> ${skippedWords}</p>
                 <hr style="margin: 14px 0; opacity: 0.3;">
                 <p><strong>MEB / BEP Eğitsel Değerlendirme Metni:</strong></p>
                 <p>${evalParagraph}</p>
